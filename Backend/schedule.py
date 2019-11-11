@@ -3,6 +3,7 @@ import datetime
 def main():
     """Main Function"""
     now = datetime.datetime.now().strftime("%H:%M")
+    choice = input()
     way = input()
     station = ['กรุงเทพมหานคร (หัวลำโพง)','อุรุพงษ์','พญาไท','ราชปรารภ','มักกะสัน','อโศก','คลองตัน',
                'สุขุมวิท 71','หัวหมาก','บ้านทับช้าง','ซอยวัดลานบุญ','ลาดกระบัง','พระจอมเกล้า','หัวตะเข้',
@@ -139,11 +140,14 @@ def main():
     plaitang = input()
     #select tontang time - plaitang time
     count = 0
-    for i in range(len(waysel)):
-        if int(plaitang)-1 <= len(waysel[i]) and waysel[i][int(tontang)-1] > now \
-           and waysel[i][int(tontang)-1] != '-' and waysel[i][int(plaitang)-1] != '-----':
-            print(i, ': '+waysel[i][int(tontang)-1]+" - "+waysel[i][int(plaitang)-1])
-            count += 1
+    if choice == 'today':
+        for i in range(len(waysel)): 
+            if int(plaitang)-1 <= len(waysel[i]) and waysel[i][int(tontang)-1] > now \
+               and waysel[i][int(tontang)-1] != '-' and waysel[i][int(plaitang)-1] != '-----':
+                print(i, ': '+waysel[i][int(tontang)-1]+" - "+waysel[i][int(plaitang)-1])
+                count += 1
+    elif choice == '30day':
+        pass
     if count == 0:
         print('No Train Schedule Today')
         return
