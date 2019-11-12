@@ -41,6 +41,10 @@
 
 <script type="text/javascript">
 	var stations = ['A', 'B', 'C', 'D', 'E', 'F', 'G'];
+	var ord1 = ['06:00','07:00','08:00'];
+	var ord2 = ['18:00','19:00','20:00'];
+	var trainname = [ord1, ord2];
+
 			function show_selected() {
     			var selector = document.getElementById('way');
     			var value = selector[selector.selectedIndex].value;
@@ -131,6 +135,19 @@
   							}
   						}
   					}
+  					var lval = lasta[lasta.selectedIndex].value;
+  					document.getElementById('last').addEventListener('click', show_time);
+  					function show_time(){
+  						/*เวลาต้นทาง*/
+  					for (i=0; i<=trainname.length; i++){
+  						for (j=0; j<(trainname[i]).length; j++){
+  							console.log('value:',value);
+  							if ((value-1) == j){
+  								console.log(trainname[i][j]);
+  							}
+  						}
+  					}
+  					}
 			}
 			document.getElementById('way').addEventListener('click', show_selected);
 			function date_selected(){
@@ -147,5 +164,6 @@
 			}
 			/* var today = new Date();
 				var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();*/
+
 			document.getElementById('ticket').addEventListener('click', date_selected);
 		</script>
