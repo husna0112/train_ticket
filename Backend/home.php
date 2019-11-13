@@ -8,7 +8,7 @@
 <body>
 	<h1>Online East Train Ticket Booking</h1>
 	<h1>ซื้อตั๋วรถไฟสายตะวันออกออนไลน์</h1>
-	<form>
+	<form id="data">
 		<p>ประเภทตั๋ว: 
 			<select id="type">
 				<option value="0">กรุณาเลือกประเภทตั๋ว</option>
@@ -41,12 +41,10 @@
 		</p>
 		<p>จำนวนตั๋ว: 
 			<input id="amount" type="text">
-			<span id="amount_check"></span>
 		</p>
 		<p>ราคา: 
-			<span id="price"></span>
+			<span id="price" value=""></span>
 		</p>
-		<button>ตกลง</button>
 	</form>
 </body>
 
@@ -280,10 +278,18 @@
                 }
             }
             if(count == 0){
-                var opt3 = document.createElement("option");
-                opt3.setAttribute("value", i);
-                opt3.innerHTML = "ไม่มีในตารางเดินรถไฟ";
-                sel2.appendChild(opt3);
+            	if(type_value == 0){
+            		var opt3 = document.createElement("option");
+                	opt3.setAttribute("value", i);
+                	opt3.innerHTML = "กรุณาเลือกประเภทตั๋วรถไฟก่อน!!!";
+                	sel2.appendChild(opt3);
+            	}
+            	else{
+            		var opt3 = document.createElement("option");
+                	opt3.setAttribute("value", i);
+                	opt3.innerHTML = "ไม่มีในตารางเดินรถไฟ";
+                	sel2.appendChild(opt3);
+            	}
             }
         }
     }
