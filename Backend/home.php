@@ -198,11 +198,14 @@
     		}
     	}
         document.getElementById('slast').addEventListener('click', show_time);
+        document.getElementById('type').addEventListener('click', show_time);
 	}
 
     function show_time(){
         var way_check = document.getElementById("way");
         var way_value = way_check[way_check.selectedIndex].value;
+        var type_check = document.getElementById('type');
+        var type_value = type_check[type_check.selectedIndex].value;
         if(way_value == 1){
             var trainname = gotrain;
             var name = goname;
@@ -235,17 +238,37 @@
             document.getElementById("time").appendChild(sel2);
             for (i=0; i<trainname.length; i++){
                 for (j=0; j<trainname[i].length; j++){
-                    //Train Name Show
-                    if ((sfirst_value-1) == j){
-                        var tname = name[i];
+                    if(type_value == 1){
+                        var today = new Date();
+                        var time = today.getHours() + ":" + today.getMinutes();
+                        if(trainname[i][j] > time){
+                            //Train Name Show
+                            if ((sfirst_value-1) == j){
+                                var tname = name[i];
+                            }
+                            //Start Times Show
+                            if ((sfirst_value-1) == j){
+                                var start = trainname[i][j];
+                            }
+                            //Finish Times Show
+                            if((slast_value) == j){
+                                var finish = trainname[i][j];
+                            }
+                        }
                     }
-                    //Start Times Show
-                    if ((sfirst_value-1) == j){
-                        var start = trainname[i][j];
-                    }
-                    //Finish Times Show
-                    if((slast_value) == j){
-                        var finish = trainname[i][j];
+                    else if(type_value == 2){
+                        //Train Name Show
+                        if ((sfirst_value-1) == j){
+                            var tname = name[i];
+                        }
+                        //Start Times Show
+                        if ((sfirst_value-1) == j){
+                            var start = trainname[i][j];
+                        }
+                        //Finish Times Show
+                        if((slast_value) == j){
+                            var finish = trainname[i][j];
+                        }
                     }
                 }
                 if(start != undefined && finish != undefined){
