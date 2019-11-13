@@ -56,6 +56,14 @@
 <script type="text/javascript">
 
 	var stations = ['A','B','C','D','E','F','G'];
+    var ord1 = ['06:00','07:00','08:00'];
+    var ord2 = ['18:00','19:00','20:00'];
+    var ord3 = ['07:00','08:00','09:00'];
+    var ord4 = ['17:00','18:00','19:00'];
+    var goname = ["ord1","ord2"];
+    var backname = ["ord3","ord4"];
+    var gotrain = [ord1, ord2];
+    var backtrain = [ord3, ord4];
 
 	function expire_date(){
 		var today = new Date();
@@ -189,6 +197,72 @@
   				document.getElementById("last").appendChild(sel1);
     		}
     	}
+        document.getElementById('slast').addEventListener('click', show_time);
 	}
+
+    function show_time(){
+        var way_check = document.getElementById("way");
+        var way_value = way_check[way_check.selectedIndex].value;
+        if(way_value == 1){
+            var trainname = gotrain;
+            var name = goname;
+        }
+        else if(way_value == 2){
+            var trainname = backtrain;
+            var name = backname;
+        }
+        var count = 0;
+        var slast_check = document.getElementById("slast");
+        var slast_value = slast_check[slast_check.selectedIndex].value;
+        var sfirst_check = document.getElementById('sfirst');
+        var sfirst_value = sfirst_check[sfirst_check.selectedIndex].value;
+        var stime_check = document.getElementById("stime");
+        if(slast_value == 0){
+            //No Selection - Time
+            stime_check.remove();
+            sel1 = document.createElement("select");
+            sel1.setAttribute("id", "stime");
+            var opt1 = document.createElement("option");
+            opt1.setAttribute("value", 0);
+            opt1.innerHTML = "กรุณาเลือกสถานีปลายทางก่อน!!!";
+            sel1.appendChild(opt1);
+            document.getElementById("time").appendChild(sel1);
+        }
+        else{
+            stime_check.remove();
+            sel2 = document.createElement("select");
+            sel2.setAttribute("id", "stime");
+            document.getElementById("time").appendChild(sel2);
+            for (i=0; i<trainname.length; i++){
+                for (j=0; j<trainname[i].length; j++){
+                    //Train Name Show
+                    if ((sfirst_value-1) == j){
+                        var tname = name[i];
+                    }
+                    //Start Times Show
+                    if ((sfirst_value-1) == j){
+                        var start = trainname[i][j];
+                    }
+                    //Finish Times Show
+                    if((slast_value) == j){
+                        var finish = trainname[i][j];
+                    }
+                }
+                if(start != undefined && finish != undefined){
+                    var opt2 = document.createElement("option");
+                    opt2.setAttribute("value", i);
+                    opt2.innerHTML = tname+": "+start+"-"+finish;
+                    sel2.appendChild(opt2);
+                    count += 1;
+                }
+            }
+            if(count == 0){
+                var opt3 = document.createElement("option");
+                opt3.setAttribute("value", i);
+                opt3.innerHTML = "ไม่มีในตารางเดินรถไฟ";
+                sel2.appendChild(opt3);
+            }
+        }
+    }
 
 </script>
