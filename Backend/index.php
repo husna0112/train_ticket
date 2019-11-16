@@ -46,7 +46,7 @@
 			<input id="amount" type="button" value=0>
 			<input id="plus" type="button" value="+">
 		</p>
-		<p>ราคา: <span id="price">-</span></p>
+		<p>ราคา: <span id="price">-</span> บาท</p>
 		<button id="submit" style="display:none">ต่อไป</button>
 	</form>
 </body>
@@ -394,6 +394,7 @@
         document.getElementById('plus').addEventListener('click', show_price);
         document.getElementById('minus').addEventListener('click', show_price);
     	document.getElementById('stime').addEventListener('click', show_price);
+      document.getElementById('slast').addEventListener('click', show_price);
     }
     function show_price(){
     	var sfirst_check = document.getElementById("sfirst");
@@ -417,10 +418,10 @@
     	else if(amount_value > 0){
     		var price_val = Math.abs(priceindex[parseInt(sfirst_value)-1]-priceindex[parseInt(slast_value)]);
     		if(price_val >= 2){
-    			price_check.innerHTML = price_val*parseInt(amount_value)+" บาท";
+    			price_check.innerHTML = price_val*parseInt(amount_value);
     		}
     		else{
-    			price_check.innerHTML = 2*parseInt(amount_value)+" บาท";
+    			price_check.innerHTML = 2*parseInt(amount_value);
     		}
     		btn.style.display = "inline";
     	}
