@@ -4,15 +4,24 @@
 	<meta charset="utf-8">
 	<title></title>
 	<?php 
+		session_start();
 		error_reporting(0);
     	$ticket_type = $_POST['type'];
+    	$_SESSION["ticket_type"] = $ticket_type;
     	$expire_date = $_POST['expire'];
+    	$_SESSION["expire_date"] = $expire_date;
     	$way = $_POST['way'];
+    	$_SESSION["way"] = $way;
     	$first_station = $_POST['first_station'];
+    	$_SESSION["first_station"] = $first_station;
     	$last_station = $_POST['last_station'];
+    	$_SESSION["last_station"] = $last_station;
     	$time = $_POST['time'];
+    	$_SESSION["time"] = $time;
     	$ticket_amount = $_POST['ticket_amount'];
+    	$_SESSION["ticket_amount"] = $ticket_amount;
     	$price = $_POST['price'];
+    	$_SESSION["price"] = $price;
     ?>
 
     <?php
@@ -42,19 +51,21 @@
    		$banklist = $_POST['banklist'];
    		$price = $_POST['price'];
    		$sql = "SELECT acc_num, password,bankname,user_money FROM bank_user"; 
+   		$count = 0;
 		$result = $conn->query($sql);
 		if ($result->num_rows > 0) {
   		// output data of each row
    			while($row = $result->fetch_assoc()) {
    				if ($acc_num == $row["acc_num"] && $acc_pw == $row["password"] && $banklist == $row["bankname"] && $price <= $row["user_money"]){
-   					echo "Yes can pay";
-   				}
-   				else{
-   					echo "NO";
+   					echo "Yes can pay Show Pay Button";
+   					$count+=1;
    				}
    			}
 		} else {
    			echo "ไม่มีข้อมูล";
+		}
+		if($count == 0){
+			echo "No Go Back Button";
 		}
 		$conn->close();
  	}
