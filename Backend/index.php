@@ -18,7 +18,7 @@
 				<option value="2">30 วัน</option>
 			</select>
 		</p>
-		<p>วันหมดอายุ: <span id="expdate">-</span>
+		<p>วันหมดอายุ: <span id="expdate">-</span></p>
 		<p>เส้นทาง: 
 			<select id="way">
 				<option value="0">กรุณาเลือกเส้นทาง</option>
@@ -46,9 +46,7 @@
 			<input id="amount" type="button" value=0>
 			<input id="plus" type="button" value="+">
 		</p>
-		<p>ราคา: 
-			<span id="price"></span>
-		</p>
+		<p>ราคา: <span id="price">-</span></p>
 		<button id="submit" style="display:none">ต่อไป</button>
 	</form>
 </body>
@@ -461,6 +459,7 @@
     	var ticket_amount_text = ticket_amount.value;
     	var price = document.getElementById("price");
     	var price_text = price.innerHTML;
+
     	type_p = document.createElement("input");
     	type_p.setAttribute("name","type");
     	type_p.setAttribute("value",ticket_type_text);
@@ -474,6 +473,7 @@
     	way_p = document.createElement("input");
     	way_p.setAttribute("name","way");
     	way_p.setAttribute("value",way_text);
+      passvalue.appendChild(way_p);
 
     	first_p = document.createElement("input");
     	first_p.setAttribute("name","first_station");
@@ -499,9 +499,6 @@
     	price_p.setAttribute("name","price");
     	price_p.setAttribute("value",price_text);
     	passvalue.appendChild(price_p);
-
-    	btn2.style.display = 'none';
-    	btn.style.display = 'inline';
     }
     document.getElementById('submit').addEventListener('click', sendtophp);
 </script>
