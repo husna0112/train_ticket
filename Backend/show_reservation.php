@@ -22,6 +22,7 @@
   		// output data of each row
    			while($row = $result->fetch_assoc()) {
    				if($randid == $row['rand_id'] && $randpw == $row['rand_pw']){
+   					$rowid = $row['id'];
    					$rowtype = $row['ticket_type'];
    					$rowexp = $row['expdate'];
    					$rowway = $row['way'];
@@ -30,6 +31,7 @@
    					$rowtime = $row['timentrain'];
    					$rowamount = $row['ticket_amount'];
    					$rowprice = $row['price'];
+   					echo "<h2>#$rowid</h2>";
    					echo "ประเภทตั๋ว: $rowtype<br><br>
    						  วันหมดอายุ: $rowexp<br><br>
    						  เส้นทาง: $rowway<br><br>
