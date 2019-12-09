@@ -34,15 +34,13 @@
 					<div class="row">
 						<div class="col main_nav_col d-flex flex-row align-items-center justify-content-start">
 							<div class="logo_container">
-								<div class="logo"><a href="#"><img src="images/logo-train.png" height="32" weight="32" alt="">TRAIN TICKET</a></div>
+								<div class="logo"><a href="#"><img src="images/logo-train.png" height="32" weight="32"
+											alt="">TRAIN TICKET</a></div>
 							</div>
 							<div class="main_nav_container ml-auto">
 								<ul class="main_nav_list">
 									<li class="main_nav_item"><a href="#">home</a></li>
 									<li class="main_nav_item"><a href="about.html">about us</a></li>
-									<li class="main_nav_item"><a href="offers.html">offers</a></li>
-									<li class="main_nav_item"><a href="blog.html">news</a></li>
-									<li class="main_nav_item"><a href="contact.html">contact</a></li>
 								</ul>
 							</div>
 							<div class="content_search ml-lg-0 ml-auto">
@@ -262,35 +260,38 @@
 											<input type="text" class="destination search_input" required="required">
 										</div>
 										<div class="search_item col-6">
-												<div>To</div>
-												<input type="text" class="destination search_input" required="required">
+											<div>To</div>
+											<input type="text" class="destination search_input" required="required">
 										</div>
 										<div class="col-9" id="search-inputs">
-									<div class="row">
-											<div class="search_item col-4">
+											<div class="row">
+												<div class="search_item col-3">
 													<div>departing</div>
-													<input type="text" class="check_in search_input" placeholder="YYYY-MM-DD">
+													<input type="text" class="check_in search_input"
+														placeholder="YYYY-MM-DD">
+												</div>
+												<div class="search_item col-3">
+													<div>returning</div>
+													<input type="text" class="check_out search_input"
+														placeholder="YYYY-MM-DD">
+												</div>
+												<div class="search_item col-2">
+														<div>person</div>
+														<input type="text" class="check_out search_input"
+															placeholder="1">
+												</div>
+												<div class="search_item col-3">
+														<div>adults</div>
+														<select name="adults" id="adults_2" class="dropdown_item_select search_input">
+															<option>One-way</option>
+															<option>Return</option>
+														</select>
+												</div>
 											</div>
-											<div class="search_item col-4">
-												<div>returning</div>
-												<input type="text" class="check_out search_input" placeholder="YYYY-MM-DD">
-										</div>
-										<div class="search_item col-4">
-												<div>person</div>
-												<select name="adults" id="adults_1"
-													class="dropdown_item_select search_input">
-													<option>01</option>
-													<option>02</option>
-													<option>03</option>
-													<option>04</option>
-													<option>05</option>
-												</select>
 										</div>
 									</div>
-								</div>
-							</div>
 									<!-- end inputs -->
-						</div>
+								</div>
 								<div class="col-3">
 									<button
 										class="button search_button">search<span></span><span></span><span></span></button>
@@ -336,180 +337,32 @@
 							</form>
 						</div>
 
-						<!-- Search Panel -->
-
-						<div class="search_panel">
-							<form action="#" id="search_form_3"
-								class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
-								<div class="search_item">
-									<div>destination</div>
-									<input type="text" class="destination search_input" required="required">
+						<div class="intro">
+							<div class="container">
+								<div class="row">
+									<div class="col">
+										<h2 class="intro_title text-center">We have the best tours</h2>
+									</div>
 								</div>
-								<div class="search_item">
-									<div>check in</div>
-									<input type="text" class="check_in search_input" placeholder="YYYY-MM-DD">
+								<div class="row">
+									<div class="col-lg-10 offset-lg-1">
+										<div class="intro_text text-center">
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu
+												convallis tortor.
+												Suspendisse potenti. In faucibus massa arcu, vitae cursus mi hendrerit
+												nec. </p>
+										</div>
+									</div>
 								</div>
-								<div class="search_item">
-									<div>check out</div>
-									<input type="text" class="check_out search_input" placeholder="YYYY-MM-DD">
-								</div>
-								<div class="search_item">
-									<div>adults</div>
-									<select name="adults" id="adults_3" class="dropdown_item_select search_input">
-										<option>01</option>
-										<option>02</option>
-										<option>03</option>
-									</select>
-								</div>
-								<button
-									class="button search_button">search<span></span><span></span><span></span></button>
-							</form>
-						</div>
-
-						<!-- Search Panel -->
-
-						<div class="search_panel">
-							<form action="#" id="search_form_4"
-								class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
-								<div class="search_item">
-									<div>destination</div>
-									<input type="text" class="destination search_input" required="required">
-								</div>
-								<div class="search_item">
-									<div>check in</div>
-									<input type="text" class="check_in search_input" placeholder="YYYY-MM-DD">
-								</div>
-								<div class="search_item">
-									<div>check out</div>
-									<input type="text" class="check_out search_input" placeholder="YYYY-MM-DD">
-								</div>
-								<div class="search_item">
-									<div>adults</div>
-									<select name="adults" id="adults_4" class="dropdown_item_select search_input">
-										<option>01</option>
-										<option>02</option>
-										<option>03</option>
-									</select>
-								</div>
-								<div class="search_item">
-									<div>children</div>
-									<select name="children" id="children_4" class="dropdown_item_select search_input">
-										<option>0</option>
-										<option>02</option>
-										<option>03</option>
-									</select>
-								</div>
-								<button
-									class="button search_button">search<span></span><span></span><span></span></button>
-							</form>
-						</div>
-
-						<!-- Search Panel -->
-
-						<div class="search_panel">
-							<form action="#" id="search_form_5"
-								class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
-								<div class="search_item">
-									<div>destination</div>
-									<input type="text" class="destination search_input" required="required">
-								</div>
-								<div class="search_item">
-									<div>check in</div>
-									<input type="text" class="check_in search_input" placeholder="YYYY-MM-DD">
-								</div>
-								<div class="search_item">
-									<div>check out</div>
-									<input type="text" class="check_out search_input" placeholder="YYYY-MM-DD">
-								</div>
-								<div class="search_item">
-									<div>adults</div>
-									<select name="adults" id="adults_5" class="dropdown_item_select search_input">
-										<option>01</option>
-										<option>02</option>
-										<option>03</option>
-									</select>
-								</div>
-								<div class="search_item">
-									<div>children</div>
-									<select name="children" id="children_5" class="dropdown_item_select search_input">
-										<option>0</option>
-										<option>02</option>
-										<option>03</option>
-									</select>
-								</div>
-								<button
-									class="button search_button">search<span></span><span></span><span></span></button>
-							</form>
-						</div>
-
-						<!-- Search Panel -->
-
-						<div class="search_panel">
-							<form action="#" id="search_form_6"
-								class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
-								<div class="search_item">
-									<div>destination</div>
-									<input type="text" class="destination search_input" required="required">
-								</div>
-								<div class="search_item">
-									<div>check in</div>
-									<input type="text" class="check_in search_input" placeholder="YYYY-MM-DD">
-								</div>
-								<div class="search_item">
-									<div>check out</div>
-									<input type="text" class="check_out search_input" placeholder="YYYY-MM-DD">
-								</div>
-								<div class="search_item">
-									<div>adults</div>
-									<select name="adults" id="adults_6" class="dropdown_item_select search_input">
-										<option>01</option>
-										<option>02</option>
-										<option>03</option>
-									</select>
-								</div>
-								<div class="search_item">
-									<div>children</div>
-									<select name="children" id="children_6" class="dropdown_item_select search_input">
-										<option>0</option>
-										<option>02</option>
-										<option>03</option>
-									</select>
-								</div>
-								<button
-									class="button search_button">search<span></span><span></span><span></span></button>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- Intro -->
-
-		<div class="intro">
-			<div class="container">
-				<div class="row">
-					<div class="col">
-						<h2 class="intro_title text-center">We have the best tours</h2>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-lg-10 offset-lg-1">
-						<div class="intro_text text-center">
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu convallis tortor.
-								Suspendisse potenti. In faucibus massa arcu, vitae cursus mi hendrerit nec. </p>
-						</div>
-					</div>
-				</div>
-				<div class="row intro_items">
+							</div>
 
 
-	<script src="js/jquery-3.2.1.min.js"></script>
-	<script src="styles/bootstrap4/popper.js"></script>
-	<script src="styles/bootstrap4/bootstrap.min.js"></script>
-	<script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
-	<script src="plugins/easing/easing.js"></script>
-	<script src="js/custom.js"></script>
+							<script src="js/jquery-3.2.1.min.js"></script>
+							<script src="styles/bootstrap4/popper.js"></script>
+							<script src="styles/bootstrap4/bootstrap.min.js"></script>
+							<script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+							<script src="plugins/easing/easing.js"></script>
+							<script src="js/custom.js"></script>
 
 </body>
 
