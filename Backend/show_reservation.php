@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+	<meta charset="utf-8">
 	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/bulma.min.css">
 	<?php
 		$username = "root";
 		$password = "";
@@ -10,9 +13,25 @@
 		$conn->set_charset("utf8");
 	?>
 </head>
+
 <body>
-	<h1>รายละเอียดตั๋ว</h1>
-	<?php
+		<section class="hero">
+				<div class="hero-body">
+					<div class="container">
+					</div>
+				</div>
+			</section>
+
+
+	<div class="columns">
+		<div class="column is-3"></div>
+		<div class="column is-6">
+			<div class="container">
+				<div class="tile is-ancestor">
+					<div class="tile is-vertical is-parent">
+						<div class="tile is-child box">
+							<h1 class="title">รายละเอียดตั๋ว</h1>
+							<?php
    		$sql = "SELECT * FROM booking_log"; 
    		session_start();
 		$result = $conn->query($sql);
@@ -47,7 +66,14 @@
 		}
  		$conn->close();
 	?>
-	<p>การเข้าสู่หน้านี้ได้แสดงว่าตั๋วนี้ได้รับการซื้อมาอย่างถูกต้อง</p>
-	<p>Watermarks</p>
+							<p>การเข้าสู่หน้านี้ได้แสดงว่าตั๋วนี้ได้รับการซื้อมาอย่างถูกต้อง</p>
+							<p>Watermarks</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
+
 </html>

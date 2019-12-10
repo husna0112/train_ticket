@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+	<meta charset="utf-8">
 	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/bulma.min.css">
 	<?php
 		$username = "root";
 		$password = "";
@@ -10,15 +13,31 @@
 		$conn->set_charset("utf8");
 	?>
 </head>
-<body>
-<h1>ตรวจตั๋ว</h1>
-<form method="post">
-	ID: <input type="text" name="randid"><br><br>
-	PW:	<input type="password" name="randpw"><br><br>
-	<input type="submit" name="submit" value="ตรวจสอบ">
-</form>
 
-<?php
+<body>
+	<div class="columns">
+		<div class="column is-3"></div>
+		<div class="column is-6">
+			<div class="container">
+				<div class="tile is-ancestor">
+					<div class="tile is-vertical is-parent">
+						<div class="tile is-child box">
+							<h1 class="title">ตรวจตั๋ว</h1>
+							<form method="post">
+								ID: <input class="input" type="text" name="randid"><br><br>
+								PW: <input class="input" type="password" name="randpw"><br><br>
+								<input class="button is-link is-rounded" type="submit" name="submit" value="ตรวจสอบ">
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+
+
+	<?php
 if (isset($_POST['submit'])) {
 		session_start();
 		$count = 0;
@@ -46,4 +65,5 @@ if (isset($_POST['submit'])) {
  	$conn->close();
 ?>
 </body>
+
 </html>

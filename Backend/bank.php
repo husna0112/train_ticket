@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="utf-8">
 	<title></title>
-    <?php
+	<link rel="stylesheet" type="text/css" href="css/bulma.min.css">
+	<?php
 		$username = "root";
 		$password = "";
 		$db = "train_proj";
@@ -37,33 +39,51 @@
 		$price = $_SESSION["price"];
 	?>
 </head>
+
 <body>
-	<h1>โอนเงินผ่านบัญชีธนาคาร</h1>
-		<form method="post">
-		ธนาคาร: <select name="banklist">
-			<option value=0>กรุณาเลือกธนาคาร</option>
-			<option value="ธนาคารออมสิน">ธนาคารออมสิน</option>
-			<option value="ธนาคารกสิกรไทย">ธนาคารกสิกรไทย</option>
-			<option value="ธนาคารกสิกรไทย">ธนาคารกรุงเทพ</option>
-			<option value="ธนาคารกสิกรไทย">ธนาคารกรุงไทย</option>
-			<option value="ธนาคารกสิกรไทย">ธนาคารธนชาต</option>
-			<option value="ธนาคารกสิกรไทย">ธนาคารกรุงศรีอยุธยา</option>
-			<option value="ธนาคารกสิกรไทย">ธนาคารUOB</option>
-		</select><br><br>
-		หมายเลขบัญชีธนาคาร: <input type="text" name="acc_num"><br><br>
-		รหัสผ่าน: <input type="password" name="acc_pw"><br><br>
-		<span style="display: none;">
-			<input name='type' value='<?php echo $ticket_type?>'>
-    		<input name='expire' value='<?php echo $expire_date ?>'>
-    		<input name='way' value='<?php echo $way ?>'>
-    		<input name='first_station' value='<?php echo $first_station ?>'>
-    		<input name='last_station' value='<?php echo $last_station ?>'>
-    		<input name='time' value='<?php echo $time ?>'>
-    		<input name='ticket_amount' value='<?php echo $ticket_amount ?>'>
-    		<input name='price' value='<?php echo $price ?>'>
-		</span>
-		<input name='submit' type='submit' value='ตรวจสอบ''>
-    	</form>
+
+	<div class="columns">
+		<div class="column is-3"></div>
+		<div class="column is-6">
+			<div class="container">
+                <div class="tile is-ancestor">
+                    <div class="tile is-vertical is-parent">
+                        <div class="tile is-child box">
+								<h1 class="title">โอนเงินผ่านบัญชีธนาคาร</h1>
+									ธนาคาร: <select name="banklist">
+										<option value=0>กรุณาเลือกธนาคาร</option>
+										<option value="ธนาคารออมสิน">ธนาคารออมสิน</option>
+										<option value="ธนาคารกสิกรไทย">ธนาคารกสิกรไทย</option>
+										<option value="ธนาคารกสิกรไทย">ธนาคารกรุงเทพ</option>
+										<option value="ธนาคารกสิกรไทย">ธนาคารกรุงไทย</option>
+										<option value="ธนาคารกสิกรไทย">ธนาคารธนชาต</option>
+										<option value="ธนาคารกสิกรไทย">ธนาคารกรุงศรีอยุธยา</option>
+										<option value="ธนาคารกสิกรไทย">ธนาคารUOB</option>
+									</select>
+									<br><br>
+									หมายเลขบัญชีธนาคาร: <input class="input" type="text" name="acc_num" ><br><br>
+									รหัสผ่าน: <input class="input" type="password" name="acc_pw" ><br><br>
+									<span style="display: none;">
+										<input name='type' value='<?php echo $ticket_type?>'>
+										<input name='expire' value='<?php echo $expire_date ?>'>
+										<input name='way' value='<?php echo $way ?>'>
+										<input name='first_station' value='<?php echo $first_station ?>'>
+										<input name='last_station' value='<?php echo $last_station ?>'>
+										<input name='time' value='<?php echo $time ?>'>
+										<input name='ticket_amount' value='<?php echo $ticket_amount ?>'>
+										<input name='price' value='<?php echo $price ?>'>
+									</span>
+									<input class="button is-link is-rounded" name='submit' type='submit' value='ตรวจสอบ''>
+									</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="column is-3"></div>
+	</div>
+
+	
     <?php
   	if (isset($_POST['submit'])) {
   		$acc_num = $_POST['acc_num'];
