@@ -86,11 +86,7 @@
                         </p>
                         <!-- <p>ราคา: <span id="price">-</span> บาท</p> -->
 
-                        </form>
-
-
-
-
+                        
                     </div>
                 </div>
             </div>
@@ -107,6 +103,7 @@
                         <!-- <div class="submitpaading"> -->
                         <button class="button is-link is-rounded" id="submit" style="display:none">ต่อไป</button>
                         <!-- </div> -->
+                        </form>
                     </div>
                 </div>
             </div>
