@@ -2,12 +2,37 @@
 <html>
 
 <head>
-	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="css/bulma.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blog - Free Bulma template</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
 </head>
 
 <body>
-	<section class="hero is-medium is-primary is-bold">
+    <main class="container">
+        <img src="img/logo.png" alt="Logo" height="400" width="400">
+        <h1>Online East Train Ticket Booking</h1>
+        <h1>ซื้อตั๋วรถไฟสายตะวันออกออนไลน์</h1><br><br>
+        <div class="row">
+            <div class="colum">
+                <form action="check_reservation.php">
+                    <button class="button button3">ตรวจสอบตั๋วของคุณ</button>
+                </form>
+            </div>
+            <br>
+            <br>
+            <div class="colum">
+                <form action="reserve.php">
+                    <button class="button button3">ซื้อตั๋วรถไฟออนไลน์</button>
+                </form>
+            </div>
+            <weird-input name="test" v-model="message"></weird-input>
+        </div>
+    </main>
+
+
+    <!-- <section class="hero is-medium is-primary is-bold">
 		<div class="hero-body">
 			<div class="container">
 			</div>
@@ -37,17 +62,8 @@
 			</div>
 			<div class="column is-3"></div>
 		</div>
-	</div>
-	<script async type="text/javascript" src="../js/bulma.js"></script>
+	</div> -->
+    <script async type="text/javascript" src="home.js"></script>
 </body>
-<footer class="footer">
-	<div class="content has-text-centered">
-		<p>
-			<strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
-			<a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
-			is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
-		</p>
-	</div>
-</footer>
 
 </html>
