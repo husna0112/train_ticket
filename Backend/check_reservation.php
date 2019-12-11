@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<title></title>
-	<link rel="stylesheet" type="text/css" href="css/bulma.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
 	<?php
 		$username = "root";
 		$password = "";
@@ -15,28 +15,14 @@
 </head>
 
 <body>
-	<div class="columns">
-		<div class="column is-3"></div>
-		<div class="column is-6">
-			<div class="container">
-				<div class="tile is-ancestor">
-					<div class="tile is-vertical is-parent">
-						<div class="tile is-child box">
-							<h1 class="title">ตรวจตั๋ว</h1>
-							<form method="post">
-								ID: <input class="input" type="text" name="randid"><br><br>
-								PW: <input class="input" type="password" name="randpw"><br><br>
-								<input class="button is-link is-rounded" type="submit" name="submit" value="ตรวจสอบ">
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	</div>
-
-
+	<section id="hire">
+		<h1 class="title">ตรวจตั๋ว</h1>
+		<form method="post">
+			<p>ID: <input class="input" type="text" name="randid"></p>
+			<p>PW: <input class="input" type="password" name="randpw"></p><br>
+			<input type="submit" name="submit" value="ตรวจสอบ">
+		</form>
+	</section>
 	<?php
 if (isset($_POST['submit'])) {
 		session_start();
