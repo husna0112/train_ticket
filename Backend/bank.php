@@ -104,10 +104,12 @@
 					$_SESSION["ans"] = $ans;
 					$userid = $row["id"];
 					$_SESSION["userid"] = $userid;
-					echo "<p>เงินในบัญชี: $mymoney </p>
+					echo "
+						  <section>
+						  <p>เงินในบัญชี: $mymoney </p>
     					  <p>ราคาที่ต้องจ่าย: $price </p>
-    					  <p>ยอดเงินคงเหลือ: $ans </p>";
-   					echo "<form method='post'> สามารถชำระเงินได้<br><br>
+    					  <p>ยอดเงินคงเหลือ: $ans </p>
+    					  <form method='post'> สามารถชำระเงินได้<br><br>
    							กรุณากดปุ่ม <input name='save' type='submit' method='post' value='ตกลง'>
    																<span style='display: none;'>
    																	<input name='type' value='$ticket_type'>
@@ -118,15 +120,15 @@
     																<input name='time' value='$time'>
     																<input name='ticket_amount' value='$ticket_amount'>
     																<input name='price' value='$price'>
-    															</span> เพื่อยืนยันการซื้อตั๋ว</form>";
+    															</span> เพื่อยืนยันการซื้อตั๋ว</form></section>";
    					$count = 1;
    				}
    			}
 		} else {
-   			echo "ไม่มีข้อมูล";
+   			echo "<section> ไม่มีข้อมูล </section>";
 		}
 		if($count == 0){
-			echo "ไม่สามารถชำระเงินได้ กรุณาตรวจสอบและลองอีกครั้ง";
+			echo "<section> ไม่สามารถชำระเงินได้ กรุณาตรวจสอบและลองอีกครั้ง </section>";
 		}
  	}
  	if (isset($_POST['save'])) {

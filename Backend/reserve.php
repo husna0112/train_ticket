@@ -53,8 +53,8 @@
                             </p>
                         </div>
                         <div class="area-text">
-                            <p id="first">สถานีต้นทาง:
-                                <div class="select is-rounded">
+                            <p>สถานีต้นทาง:
+                                <div id="first" class="select is-rounded">
                                     <select class="form-control" id="sfirst">
                                         <option value="0">กรุณาเลือกเส้นทางก่อน!!!</option>
                                     </select>
@@ -62,8 +62,8 @@
                             </p>
                         </div>
                         <div class="area-text">
-                            <p id="last">สถานีปลายทาง:
-                                <div class="select is-rounded">
+                            <p>สถานีปลายทาง:
+                                <div id="last" class="select is-rounded">
                                     <select class="form-control" id="slast">
                                         <option value="0">กรุณาเลือกสถานีต้นทางก่อน!!!</option>
                                     </select>
@@ -71,8 +71,8 @@
                             </p>
                         </div>
                         <div class="area-text">
-                            <p id="time">เวลาเดินทาง:
-                                <div class="select is-rounded">
+                            <p>เวลาเดินทาง:
+                                <div id="time" class="select is-rounded">
                                     <select class="form-control" id="stime">
                                         <option value="0">กรุณาเลือกสถานีปลายทางก่อน!!!</option>
                                     </select>
@@ -300,6 +300,7 @@
             sfirst_check.remove();
             sel = document.createElement("select");
             sel.setAttribute("id", "sfirst");
+            sel.setAttribute("class", "");
             var opt = document.createElement("option");
             opt.setAttribute("value", 0);
             opt.innerHTML = "กรุณาเลือกเส้นทางก่อน!!!";

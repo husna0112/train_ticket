@@ -11,7 +11,7 @@
 
 <body>
     <main class="container">
-        <img src="img/logo.png" alt="Logo" height="400" width="400">
+        <img src="img/logo.jpg" alt="Logo" height="400" width="400">
         <h1>Online East Train Ticket Booking</h1>
         <h1>ซื้อตั๋วรถไฟสายตะวันออกออนไลน์</h1><br><br>
         <div class="row">
