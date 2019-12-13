@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<title></title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="css/reserve.css">
 	<?php
 		$username = "root";
 		$password = "";
@@ -41,11 +41,14 @@
 </head>
 
 <body>
-
-	<section id="hire">
-		<h1 class="title">โอนเงินผ่านบัญชีธนาคาร</h1>
+	<div class="sc-box">
+    	<div class="sc-container">
+		<div class="imglogo">
+            <img src="img/logo.png" alt="Logo" height="100" width="100">
+        </div>
+		<h1 class="sc-main-title">โอนเงินผ่านบัญชีธนาคาร</h1>
 		<form method="post">
-		<p>ธนาคาร: <select name="banklist"></p>
+		<select class="form-control" name="banklist">
 			<option value=0>กรุณาเลือกธนาคาร</option>
 			<option value="ธนาคารออมสิน">ธนาคารออมสิน</option>
 			<option value="ธนาคารกสิกรไทย">ธนาคารกสิกรไทย</option>
@@ -55,9 +58,8 @@
 			<option value="ธนาคารกสิกรไทย">ธนาคารกรุงศรีอยุธยา</option>
 			<option value="ธนาคารกสิกรไทย">ธนาคารUOB</option>
 		</select>
-		<br><br>
-		<p>เลขบัญชี: <input class="input" type="text" name="acc_num"></p>
-		<p>รหัสผ่าน: <input class="input" type="password" name="acc_pw"></p><br>
+		<h3>เลขบัญชี: <input class="input" type="text" name="acc_num"></h3>
+		<h3>รหัสผ่าน: <input class="input" type="password" name="acc_pw"></h3><br>
 		<span style="display: none;">
 			<input name='type' value='<?php echo $ticket_type?>'>
 			<input name='expire' value='<?php echo $expire_date ?>'>
@@ -68,10 +70,13 @@
 			<input name='ticket_amount' value='<?php echo $ticket_amount ?>'>
 			<input name='price' value='<?php echo $price ?>'>
 		</span>
+		<div class="imglogo">
 		<input name='submit' type='submit' value='ตรวจสอบ'>
+		</div>
 	</form>
 
-</section>
+</div>
+</div>
 
 	
     <?php

@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<title></title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="css/reserve.css">
 	<?php
 		$username = "root";
 		$password = "";
@@ -15,14 +15,21 @@
 </head>
 
 <body>
-	<section id="hire">
-		<h1 class="title">ตรวจตั๋ว</h1>
+<div class="sc-box">
+    <div class="sc-container">
+	<div class="imglogo">
+	<img src="img/logo.png" alt="Logo" height="100" width="100">
+</div>
+		<h1 class="sc-main-title">ตรวจตั๋ว</h1>
 		<form method="post">
 			<p>ID: <input class="input" type="text" name="randid"></p>
-			<p>PW: <input class="input" type="password" name="randpw"></p><br>
+			<p>PASSWORD: <input class="input" type="password" name="randpw"></p><br>
+			<div class="imglogo">
 			<input type="submit" name="submit" value="ตรวจสอบ">
+</div>
 		</form>
-	</section>
+</div>
+</div>
 	<?php
 if (isset($_POST['submit'])) {
 		session_start();

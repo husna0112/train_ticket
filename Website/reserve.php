@@ -4,7 +4,8 @@
 <head>
     <meta charset="utf-8">
     <title></title>
-    <link rel="stylesheet" type="text/css" href="css/bulma.min.css">
+    <link rel="stylesheet" type="text/css" href="css/reserve.css">
+
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
 
@@ -12,105 +13,119 @@
 </head>
 
 <body>
-    <section class="hero">
-        <div class="hero-body">
-            <div class="container">
-            </div>
-        </div>
-    </section>
-
-    <div class="columns">
-        <div class="column is-1"></div>
-        <div class="column is-7">
-            <div class="container">
-                <div class="tile is-ancestor">
-                    <div class="tile is-vertical is-parent">
-                        <div class="tile is-child box">
-                            <h1 class="title">Online East Train Ticket Booking</h1>
-                            <h1 class="subtitle">ซื้อตั๋วรถไฟสายตะวันออกออนไลน์</h1>
-                            <form action="bank.php" method="post">
-                                <p id="data" style="display:none"></p>
-                                <div class="area-text">
-                                    <p>ประเภทตั๋ว:
-                                        <div class="select is-rounded">
-                                            <select class="form-control" id="type">
-                                                <option value="0">กรุณาเลือกประเภทตั๋ว</option>
-                                                <option value="1">1 วัน</option>
-                                                <option value="2">30 วัน</option>
-                                            </select>
-                                    </p>
-                                </div>
-                        </div>
-                        <div class="area-text">
-                            <p>เส้นทาง:
-                                <div class="select is-rounded">
-                                    <select class="form-control" id="way">
-                                        <option value="0">กรุณาเลือกเส้นทาง</option>
-                                        <option value="1">กรุงเทพมหานคร (หัวลำโพง) - ชุมทางฉะเชิงเทรา</option>
-                                        <option value="2">ชุมทางฉะเชิงเทรา - กรุงเทพมหานคร (หัวลำโพง)</option>
-                                    </select>
-                                </div>
-                            </p>
-                        </div>
-                        <div class="area-text">
-                            <p>สถานีต้นทาง:
-                                <div id="first" class="select is-rounded">
-                                    <select class="form-control" id="sfirst">
-                                        <option value="0">กรุณาเลือกเส้นทางก่อน!!!</option>
-                                    </select>
-                                </div>
-                            </p>
-                        </div>
-                        <div class="area-text">
-                            <p>สถานีปลายทาง:
-                                <div id="last" class="select is-rounded">
-                                    <select class="form-control" id="slast">
-                                        <option value="0">กรุณาเลือกสถานีต้นทางก่อน!!!</option>
-                                    </select>
-                                </div>
-                            </p>
-                        </div>
-                        <div class="area-text">
-                            <p>เวลาเดินทาง:
-                                <div id="time" class="select is-rounded">
-                                    <select class="form-control" id="stime">
-                                        <option value="0">กรุณาเลือกสถานีปลายทางก่อน!!!</option>
-                                    </select>
-                                </div>
-                            </p>
-                        </div>
-                        <p>จำนวนตั๋ว:
-                            <input id="minus" type="button" value="-">
-                            <input id="amount" type="button" value=0>
-                            <input id="plus" type="button" value="+">
-                        </p>
-                        <!-- <p>ราคา: <span id="price">-</span> บาท</p> -->
-
-                        
+    <form action="bank.php" method="post">
+        <div class="sc-box">
+            <div class="sc-container">
+                <div class="imglogo">
+                    <img src="img/logo.png" alt="Logo" height="200" width="200">
+                </div>
+                <h1 class="sc-main-title">Online East Train Ticket Booking</h1>
+                <h2 class="sc-main-title">ซื้อตั๋วรถไฟสายตะวันออกออนไลน์</h2>
+                <div class="sc-searchbox">
+                    <div class="sc-searchbox-placeholder">
                     </div>
+
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="column is-3">
-        <div class="container">
-            <div class="tile is-ancestor">
-                <div class="tile is-vertical is-parent">
-                    <div class="tile is-child box">
-                        <p class="title">ราคา</p>
-                        <p>รวมทั้งสิ้น:<span id="price">-</span> บาท</p>
-                        <p>วันหมดอายุ: <span id="expdate">-</span></p>
-                        <!-- <div class="submitpaading"> -->
-                        <button class="button is-link is-rounded" id="submit" style="display:none">ต่อไป</button>
-                        <!-- </div> -->
-                        </form>
+            <div class="sc-container sc-timeline">
+                <div class="sc-timeline-item">
+                    <i class="sc-timeline-icon fas fa-utensils">
+                        <p>1</p>
+                    </i>
+                    <div class="sc-timeline-info">
+                        <div class="area-text">
+                            <h3 class="sc-timeline-title">ประเภทตั๋ว</h3>
+                            <select class="form-control" id="type">
+                                <option value="0">กรุณาเลือกประเภทตั๋ว</option>
+                                <option value="1">1 วัน</option>
+                                <option value="2">30 วัน</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
+                <div class="sc-timeline-item">
+                    <i class="sc-timeline-icon fas fa-comments">
+                        <p>2</p>
+                    </i>
+                    <div class="sc-timeline-info">
+                        <div class="area-text">
+                            <h3 class="sc-timeline-title">เส้นทางการเดินทาง</h3>
+                            <select class="form-control" id="way">
+                                <option value="0">กรุณาเลือกเส้นทาง</option>
+                                <option value="1">กรุงเทพมหานคร (หัวลำโพง) - ชุมทางฉะเชิงเทรา</option>
+                                <option value="2">ชุมทางฉะเชิงเทรา - กรุงเทพมหานคร (หัวลำโพง)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="sc-timeline-item">
+                    <i class="sc-timeline-icon fas fa-comments">
+                        <p>3</p>
+                    </i>
+                    <div class="sc-timeline-info">
+                        <div class="area-text">
+                            <h3 class="sc-timeline-title">สถานีต้นทาง</h3>
+                            <div id="first" class="select is-rounded">
+                                <select class="form-control" id="sfirst">
+                                    <option value="0">กรุณาเลือกเส้นทางก่อน!!!</option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="sc-timeline-item">
+                    <i class="sc-timeline-icon fas fa-comments">
+                        <p>4</p>
+                    </i>
+                    <div class="sc-timeline-info">
+                        <div class="area-text">
+                            <h3 class="sc-timeline-title">สถานีปลายทาง</h3>
+                            <div id="last" class="select is-rounded">
+                                <select class="form-control" id="slast">
+                                    <option value="0">กรุณาเลือกสถานีต้นทางก่อน!!!</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sc-timeline-item">
+                    <i class="sc-timeline-icon fas fa-comments">
+                        <p>5</p>
+                    </i>
+                    <div class="sc-timeline-info">
+                        <div class="area-text">
+                            <h3 class="sc-timeline-title">เวลาการเดินทาง</h3>
+                            <div id="time" class="select is-rounded">
+                                <select class="form-control" id="stime">
+                                    <option value="0">กรุณาเลือกสถานีปลายทางก่อน!!!</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sc-timeline-item">
+                    <i class="sc-timeline-icon fas fa-utensils">
+                        <p>6</p>
+                    </i>
+                    <div class="sc-timeline-info">
+                        <h3 class="sc-timeline-title">จำนวนตั๋ว</h3>
+                        <input id="minus" type="button" value="-">
+                        <input id="amount" type="button" value=0>
+                        <input id="plus" type="button" value="+">
+                    </div>
+                </div>
+                <h1 class="sc-main-title">ราคา</h1>
+                <div class="imglogoright">
+                <p>รวมทั้งสิ้น:<span id="price">-</span> บาท</p>
+                <p>วันหมดอายุ: <span id="expdate">-</span></p>
+            </div>
+                <div class="imglogo">
+                <button class="button is-link is-rounded" id="submit" style="display:none">ต่อไป</button>
+            </div>
             </div>
         </div>
-        <div class="column is-1"></div>
-    </div>
-
+    </form>
 </body>
 
 </html>
