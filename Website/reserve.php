@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>จองตั๋วรถไฟ</title>
     <link rel="stylesheet" type="text/css" href="css/reserve.css">
 
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -123,6 +123,7 @@
                 <div class="imglogo">
                 <button class="button is-link is-rounded" id="submit" style="display:none">ต่อไป</button>
             </div>
+            <div id="data" style="display:none"></div>
             </div>
         </div>
     </form>
@@ -315,7 +316,6 @@
             sfirst_check.remove();
             sel = document.createElement("select");
             sel.setAttribute("id", "sfirst");
-            sel.setAttribute("class", "");
             var opt = document.createElement("option");
             opt.setAttribute("value", 0);
             opt.innerHTML = "กรุณาเลือกเส้นทางก่อน!!!";

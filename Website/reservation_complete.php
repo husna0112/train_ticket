@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title></title>
+	<title>จอวตั๋วสำเร็จ</title>
 	<link rel="stylesheet" type="text/css" href="css/reserve.css">
 </head>
 <body>
@@ -19,7 +19,7 @@
 		echo "ID: $randid <br><br>";
 		echo "PW: $randpw <br><br>"; 
 	?> 
-	*Note: Please Take Photo of screen to remember and show check on check page when use the train
+	*Note: กรุณาถ่ายภาพหน้าจอของหน้านี้ไว้เพื่อให้ท่านสามารถเข้าสู่หน้าตรวจสอบตั๋วเพื่อตรวจสอบตั๋วได้เมื่อใช้งานรถไฟ
 </div>
 </div>
 </body>

@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<title></title>
+	<title>ตรวจสอบตั๋ว</title>
 	<link rel="stylesheet" type="text/css" href="css/reserve.css">
 	<?php
 		$username = "root";

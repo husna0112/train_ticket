@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Blog - Free Bulma template</title>
+    <title>ระบบซื้อตั๋วรถไฟสายตะวันออกออนไลน์</title>
     <link rel="stylesheet" type="text/css" href="css/reserve.css">
 </head>
 </head>

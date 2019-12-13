@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<title></title>
+	<title>แสดงการจองตั๋วรภไฟ</title>
 	<link rel="stylesheet" type="text/css" href="css/bulma.min.css">
 	<?php
 		$username = "root";
