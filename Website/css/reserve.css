@@ -353,7 +353,7 @@
 
   
   
-  .form-control {
+  select:nth-child(1) {
     display: block;
       font-size: 12px;
       font-family: sans-serif;

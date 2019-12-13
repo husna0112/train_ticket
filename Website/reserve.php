@@ -35,11 +35,13 @@
                     <div class="sc-timeline-info">
                         <div class="area-text">
                             <h3 class="sc-timeline-title">ประเภทตั๋ว</h3>
-                            <select class="form-control" id="type">
-                                <option value="0">กรุณาเลือกประเภทตั๋ว</option>
-                                <option value="1">1 วัน</option>
-                                <option value="2">30 วัน</option>
-                            </select>
+                            <div>
+                                <select id="type">
+                                    <option value="0">กรุณาเลือกประเภทตั๋ว</option>
+                                    <option value="1">1 วัน</option>
+                                    <option value="2">30 วัน</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -50,11 +52,13 @@
                     <div class="sc-timeline-info">
                         <div class="area-text">
                             <h3 class="sc-timeline-title">เส้นทางการเดินทาง</h3>
-                            <select class="form-control" id="way">
-                                <option value="0">กรุณาเลือกเส้นทาง</option>
-                                <option value="1">กรุงเทพมหานคร (หัวลำโพง) - ชุมทางฉะเชิงเทรา</option>
-                                <option value="2">ชุมทางฉะเชิงเทรา - กรุงเทพมหานคร (หัวลำโพง)</option>
-                            </select>
+                            <div>
+                                <select id="way">
+                                    <option value="0">กรุณาเลือกเส้นทาง</option>
+                                    <option value="1">กรุงเทพมหานคร (หัวลำโพง) - ชุมทางฉะเชิงเทรา</option>
+                                    <option value="2">ชุมทางฉะเชิงเทรา - กรุงเทพมหานคร (หัวลำโพง)</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -66,7 +70,7 @@
                         <div class="area-text">
                             <h3 class="sc-timeline-title">สถานีต้นทาง</h3>
                             <div id="first" class="select is-rounded">
-                                <select class="form-control" id="sfirst">
+                                <select id="sfirst">
                                     <option value="0">กรุณาเลือกเส้นทางก่อน!!!</option>
                                 </select>
                             </div>
@@ -82,7 +86,7 @@
                         <div class="area-text">
                             <h3 class="sc-timeline-title">สถานีปลายทาง</h3>
                             <div id="last" class="select is-rounded">
-                                <select class="form-control" id="slast">
+                                <select id="slast">
                                     <option value="0">กรุณาเลือกสถานีต้นทางก่อน!!!</option>
                                 </select>
                             </div>
@@ -97,7 +101,7 @@
                         <div class="area-text">
                             <h3 class="sc-timeline-title">เวลาการเดินทาง</h3>
                             <div id="time" class="select is-rounded">
-                                <select class="form-control" id="stime">
+                                <select id="stime">
                                     <option value="0">กรุณาเลือกสถานีปลายทางก่อน!!!</option>
                                 </select>
                             </div>
