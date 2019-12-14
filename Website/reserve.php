@@ -129,7 +129,7 @@
             </div>
             <div id="data" style="display:none"></div>
             <br> 
-	<h3><a href="index.php"> < ย้อนกลับ</a></h3>
+	<h3><a href="index.php"> < กลับสู่หน้าหลัก<></h3>
             </div>
         </div>
     </form>
@@ -538,7 +538,7 @@
         document.getElementById('stime').addEventListener('click', show_price);
         document.getElementById('slast').addEventListener('click', show_price);
     }
-
+    //Show All of Price in transaction : price ticket * number of ticket
     function show_price() {
         var sfirst_check = document.getElementById("sfirst");
         var sfirst_value = sfirst_check[sfirst_check.selectedIndex].value;
@@ -566,13 +566,13 @@
             btn.style.display = "inline";
         }
     }
-
+    //Add number of ticket when user click button plus
     function plus_ticket() {
         var amount_check = document.getElementById("amount");
         var amount_value = amount_check.value;
         amount_check.value = parseInt(amount_value) + 1;
     }
-
+    //Reduce number of ticket when user click icon minus
     function minus_ticket() {
         var amount_check = document.getElementById("amount");
         var amount_value = amount_check.value;
@@ -583,6 +583,9 @@
     document.getElementById('plus').addEventListener('click', plus_ticket);
     document.getElementById('minus').addEventListener('click', minus_ticket);
 
+    //Send data to next step is bank
+    //When User click to submit button
+    //this function get all data in form : type of ticket, expdate, way, firstation, destination, amount and price
     function sendtophp() {
         var passvalue = document.getElementById("data");
         passvalue.innerHTML = '';

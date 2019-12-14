@@ -47,6 +47,9 @@
             <img src="img/logo.png" alt="Logo" height="100" width="100">
         </div>
 		<h1 class="sc-main-title">โอนเงินผ่านบัญชีธนาคาร</h1>
+		<div class="imglogo">
+            <img src="img/banklogo.png" height="100" width="450">
+        </div>
 		<form method="post">
 		<select class="form-control" name="banklist">
 			<option value=0>กรุณาเลือกธนาคาร</option>
