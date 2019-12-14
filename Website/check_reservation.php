@@ -14,7 +14,7 @@
 	?>
 </head>
 
-<body>
+<body link="black" vlink="black">
 <div class="sc-box">
     <div class="sc-container">
 	<div class="imglogo">
@@ -28,7 +28,10 @@
 			<input type="submit" name="submit" value="ตรวจสอบ">
 </div>
 		</form>
+		<br> 
+	<h3><a href="index.php"> < กลับสู่หน้าหลัก</a></h3>
 </div>
+
 </div>
 	<?php
 if (isset($_POST['submit'])) {

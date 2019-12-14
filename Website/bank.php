@@ -40,7 +40,7 @@
 	?>
 </head>
 
-<body>
+<body link="black" vlink="black">
 	<div class="sc-box">
     	<div class="sc-container">
 		<div class="imglogo">
@@ -71,12 +71,12 @@
 			<input name='price' value='<?php echo $price ?>'>
 		</span>
 		<div class="imglogo">
-		<input name='submit' type='submit' value='ตรวจสอบ'>
+			<input name='submit' type='submit' value='ตรวจสอบ'>
 		</div>
 	</form>
+	<br> 
+	<h3><a href="reserve.php"> < ย้อนกลับ</a></h3>
 
-</div>
-</div>
 
 	
     <?php
@@ -109,11 +109,12 @@
 					$_SESSION["ans"] = $ans;
 					$userid = $row["id"];
 					$_SESSION["userid"] = $userid;
-					echo "
+					echo "<br><br>
+						<div class='modal-content'>
 						  <section>
 						  <p>เงินในบัญชี: $mymoney </p>
     					  <p>ราคาที่ต้องจ่าย: $price </p>
-    					  <p>ยอดเงินคงเหลือ: $ans </p>
+						  <p>ยอดเงินคงเหลือ: $ans </p>
     					  <form method='post'> สามารถชำระเงินได้<br><br>
    							กรุณากดปุ่ม <input name='save' type='submit' method='post' value='ตกลง'>
    																<span style='display: none;'>
@@ -125,15 +126,15 @@
     																<input name='time' value='$time'>
     																<input name='ticket_amount' value='$ticket_amount'>
     																<input name='price' value='$price'>
-    															</span> เพื่อยืนยันการซื้อตั๋ว</form></section>";
+    															</span> เพื่อยืนยันการซื้อตั๋ว</form></section></div>";
    					$count = 1;
    				}
    			}
 		} else {
-   			echo "<section> ไม่มีข้อมูล </section>";
+   			echo "<section style='color: red;'><br><br> ไม่มีข้อมูล </section>";
 		}
 		if($count == 0){
-			echo "<section> ไม่สามารถชำระเงินได้ กรุณาตรวจสอบและลองอีกครั้ง </section>";
+			echo "<br><br><section style='color: red;'> ไม่สามารถชำระเงินได้ กรุณาตรวจสอบเลขที่บัญชีหรือรหัสผ่านและลองอีกครั้ง </section>";
 		}
  	}
  	if (isset($_POST['save'])) {
@@ -155,5 +156,8 @@
 	}
  	$conn->close();
 	?>
+
+</div>
+</div>
 </body>
 </html>

@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>แสดงการจองตั๋วรภไฟ</title>
-	<link rel="stylesheet" type="text/css" href="css/bulma.min.css">
+	<link rel="stylesheet" type="text/css" href="css/reserve.css">
 	<?php
 		$username = "root";
 		$password = "";
@@ -15,22 +15,12 @@
 </head>
 
 <body>
-		<section class="hero">
-				<div class="hero-body">
-					<div class="container">
-					</div>
-				</div>
-			</section>
-
-
-	<div class="columns">
-		<div class="column is-3"></div>
-		<div class="column is-6">
-			<div class="container">
-				<div class="tile is-ancestor">
-					<div class="tile is-vertical is-parent">
-						<div class="tile is-child box">
-							<h1 class="title">รายละเอียดตั๋ว</h1>
+<div class="sc-box">
+    <div class="sc-container">
+	<div class="imglogo">
+	<img src="img/logo.png" alt="Logo" height="200" width="200">
+</div>
+							<h1 class="sc-main-title">รายละเอียดตั๋ว</h1>
 							<?php
    		$sql = "SELECT * FROM booking_log"; 
    		session_start();
@@ -66,12 +56,14 @@
 		}
  		$conn->close();
 	?>
+	<div class="imglogo">
+	<form action="index.php">
+                    <button class="button button3">กลับสู่หน้าหลัก</button>
+				</form>
+	</div>
 						</div>
 					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+
 </body>
 
 </html>

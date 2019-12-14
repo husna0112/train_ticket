@@ -12,7 +12,7 @@
 
 </head>
 
-<body>
+<body link="black" vlink="black">
     <form action="bank.php" method="post">
         <div class="sc-box">
             <div class="sc-container">
@@ -128,6 +128,8 @@
                 <button class="button is-link is-rounded" id="submit" style="display:none">ต่อไป</button>
             </div>
             <div id="data" style="display:none"></div>
+            <br> 
+	<h3><a href="index.php"> < ย้อนกลับ</a></h3>
             </div>
         </div>
     </form>

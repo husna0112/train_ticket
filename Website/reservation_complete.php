@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>จอวตั๋วสำเร็จ</title>
+	<title>จองตั๋วสำเร็จ</title>
 	<link rel="stylesheet" type="text/css" href="css/reserve.css">
 </head>
 <body>
@@ -20,6 +20,12 @@
 		echo "PW: $randpw <br><br>"; 
 	?> 
 	*Note: กรุณาถ่ายภาพหน้าจอของหน้านี้ไว้เพื่อให้ท่านสามารถเข้าสู่หน้าตรวจสอบตั๋วเพื่อตรวจสอบตั๋วได้เมื่อใช้งานรถไฟ
+	<br>
+	<div class="imglogo">
+	<form action="index.php">
+                    <button class="button button3">กลับสู่หน้าหลัก</button>
+				</form>
+	</div>
 </div>
 </div>
 </body>
